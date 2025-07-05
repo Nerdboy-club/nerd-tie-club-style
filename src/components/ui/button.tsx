@@ -18,11 +18,18 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // NERDBOY.CLUB custom variants
+        nerd: "nerd-button text-foreground font-bold hover:text-primary-foreground",
+        retro: "bg-nerd-burgundy text-background font-bold hover:bg-primary-glow hover:shadow-lg transform hover:scale-105 transition-all duration-300",
+        vhs: "bg-nerd-yellow text-foreground font-bold hover:bg-secondary/80 hover:shadow-md transform hover:scale-105",
+        mint: "bg-nerd-mint text-foreground font-bold hover:bg-muted hover:shadow-md transform hover:scale-105",
+        club: "bg-gradient-to-r from-nerd-burgundy to-nerd-yellow text-background font-bold hover:from-primary-glow hover:to-nerd-mint hover:shadow-xl transform hover:scale-110 transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg font-bold",
         icon: "h-10 w-10",
       },
     },
