@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - NERDBOY.CLUB</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top retro-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="logo-glasses">👓</span>
+                <span class="logo-text">nerdboy.club</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shipping.html">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 100px;">
+        <div class="container">
+            <!-- Header -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="hero-title">Каталог галстуков</h1>
+                    <p class="hero-subtitle">Выбирай свою странность</p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <button class="btn btn-nerd active" onclick="filterProducts('all')">Все</button>
+                        <button class="btn btn-outline-primary" onclick="filterProducts('knitted')">Вязаные</button>
+                        <button class="btn btn-outline-primary" onclick="filterProducts('printed')">Принтованные</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row" id="productsGrid">
+                <!-- Sad But Crisp -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="knitted">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=250&fit=crop');">
+                            <span class="product-badge badge-knitted">Вязаный</span>
+                            <span class="product-badge badge-new" style="left: 90px;">NEW!</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Sad But Crisp</h3>
+                            <p class="product-description">
+                                Для тех моментов, когда хочется плакать, но выглядеть стильно. 
+                                Мягкий, уютный и немного депрессивный.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,500 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDK TIE -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="printed">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop');">
+                            <span class="product-badge badge-printed">Принтованный</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">IDK TIE</h3>
+                            <p class="product-description">
+                                Когда не знаешь, что надеть, но надо выглядеть так, 
+                                будто ты в курсе. Универсальный выбор неопределённости.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,200 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Homework Eater -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="printed">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop');">
+                            <span class="product-badge badge-printed">Принтованный</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Homework Eater</h3>
+                            <p class="product-description">
+                                Идеальное оправдание для учителей и боссов. 
+                                "Извините, мой галстук съел домашку". Никто не поверит, но попробовать стоит.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,800 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pixel Dreams -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="knitted">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop');">
+                            <span class="product-badge badge-knitted">Вязаный</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Pixel Dreams</h3>
+                            <p class="product-description">
+                                8-битные мечты в формате галстука. Для тех, кто застрял в 90-х 
+                                и не собирается оттуда выбираться.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,600 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Stain -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="printed">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop');">
+                            <span class="product-badge badge-printed">Принтованный</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Coffee Stain</h3>
+                            <p class="product-description">
+                                Уже с готовым пятном от кофе! Теперь можно не переживать, 
+                                если прольёшь утренний латте.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,400 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procrastination Master -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item" data-type="knitted">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=250&fit=crop&q=80');">
+                            <span class="product-badge badge-knitted">Вязаный</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Procrastination Master</h3>
+                            <p class="product-description">
+                                Для профессионалов прокрастинации. Этот галстук поможет 
+                                стильно откладывать дела на завтра.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">2,700 ₽</span>
+                                <button class="btn btn-nerd btn-sm wobble">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 NERDBOY.CLUB. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link ms-3">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function filterProducts(type) {
+            const products = document.querySelectorAll('.product-item');
+            const buttons = document.querySelectorAll('.btn');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('btn-nerd', 'active');
+                btn.classList.add('btn-outline-primary');
+            });
+            
+            event.target.classList.remove('btn-outline-primary');
+            event.target.classList.add('btn-nerd', 'active');
+            
+            // Filter products
+            products.forEach(product => {
+                if (type === 'all' || product.dataset.type === type) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,28 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NERDBOY.CLUB - Club for the Weirdly Tied</title>
     <meta name="description" content="Retro club for knitted and printed ties. Weird, stylish, crisp." />
-    <meta name="author" content="NERDBOY.CLUB" />
-
-    <meta property="og:title" content="NERDBOY.CLUB - Club for the Weirdly Tied" />
-    <meta property="og:description" content="Retro club for knitted and printed ties. Weird, stylish, crisp." />
     
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top retro-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <span class="logo-glasses">👓</span>
+                <span class="logo-text">nerdboy.club</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shipping.html">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content slide-in-left">
+                        <h1 class="hero-title">NERDBOY.CLUB</h1>
+                        <p class="hero-subtitle">Club for the Weirdly Tied</p>
+                        <p class="hero-description">
+                            Ретро-клуб для странных галстуков. Вязаные, принтованные, 
+                            абсолютно бесполезные — но очень стильные.
+                        </p>
+                        <a href="catalog.html" class="btn btn-nerd btn-lg wobble">
+                            Перейти в каталог
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image fade-in-up">
+                        <div class="hero-glasses">👓</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card retro-card text-center">
+                        <div class="feature-icon">🧶</div>
+                        <h3>Вязаные галстуки</h3>
+                        <p>Уютные, странные и абсолютно неподходящие для офиса</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card retro-card text-center">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Принтованные</h3>
+                        <p>С персонажами, узорами и прочей чепухой</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card retro-card text-center">
+                        <div class="feature-icon">✨</div>
+                        <h3>Стильные</h3>
+                        <p>Потому что быть странным — это круто</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 NERDBOY.CLUB. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link ms-3">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

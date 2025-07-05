@@ -1,0 +1,368 @@
+/* NERDBOY.CLUB Custom Styles */
+
+:root {
+    /* Color System - HSL Values */
+    --nerd-burgundy: hsl(340, 65%, 45%);
+    --nerd-vhs-yellow: hsl(51, 100%, 70%);
+    --nerd-mint: hsl(165, 35%, 75%);
+    --nerd-lavender: hsl(270, 25%, 75%);
+    --nerd-cream: hsl(49, 100%, 96%);
+    --nerd-dark-burgundy: hsl(340, 65%, 25%);
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, var(--nerd-burgundy), var(--nerd-vhs-yellow));
+    --gradient-card: linear-gradient(180deg, var(--nerd-cream), hsl(270, 25%, 75%, 0.3));
+    --gradient-button: linear-gradient(135deg, var(--nerd-vhs-yellow), var(--nerd-mint));
+    
+    /* Shadows */
+    --shadow-retro: 0 8px 32px hsl(340, 65%, 45%, 0.2);
+    --shadow-card: 0 4px 16px hsl(270, 25%, 75%, 0.3);
+    --shadow-glow: 0 0 20px hsl(51, 100%, 70%, 0.5);
+    
+    /* Transitions */
+    --transition-bouncy: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Typography */
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--nerd-dark-burgundy);
+    background-color: var(--nerd-cream);
+    line-height: 1.6;
+}
+
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: var(--nerd-burgundy);
+    margin-left: 0.5rem;
+}
+
+.logo-glasses {
+    font-size: 1.8rem;
+    animation: wobble 2s ease-in-out infinite;
+}
+
+/* Navigation */
+.retro-nav {
+    background: var(--gradient-card) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-card);
+    border-bottom: 3px solid var(--nerd-vhs-yellow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--nerd-dark-burgundy) !important;
+    margin: 0 0.5rem;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--nerd-burgundy) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--nerd-vhs-yellow);
+    transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-hero);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3.5rem;
+    color: var(--nerd-burgundy);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--nerd-burgundy);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--nerd-dark-burgundy);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.hero-glasses {
+    font-size: 15rem;
+    text-align: center;
+    opacity: 0.3;
+    animation: wobble 3s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn-nerd {
+    background: var(--gradient-button);
+    border: 3px solid var(--nerd-burgundy);
+    color: var(--nerd-dark-burgundy);
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: var(--transition-bouncy);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-nerd:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-retro);
+    color: var(--nerd-dark-burgundy);
+}
+
+/* Cards */
+.retro-card {
+    background: var(--gradient-card);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-bouncy);
+    border: 2px solid var(--nerd-lavender);
+}
+
+.retro-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-retro);
+}
+
+.feature-card {
+    height: 100%;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--nerd-burgundy);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Product Cards */
+.product-card {
+    background: var(--gradient-card);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-bouncy);
+    border: 2px solid var(--nerd-lavender);
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-retro);
+}
+
+.product-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-knitted {
+    background: var(--nerd-mint);
+    color: var(--nerd-dark-burgundy);
+}
+
+.badge-printed {
+    background: var(--nerd-vhs-yellow);
+    color: var(--nerd-dark-burgundy);
+}
+
+.badge-new {
+    background: var(--nerd-burgundy);
+    color: var(--nerd-cream);
+    animation: pulse 2s infinite;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-title {
+    color: var(--nerd-burgundy);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    color: var(--nerd-dark-burgundy);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--nerd-burgundy);
+}
+
+/* Forms */
+.form-control {
+    border: 2px solid var(--nerd-lavender);
+    border-radius: 15px;
+    padding: 12px 20px;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+    border-color: var(--nerd-burgundy);
+    box-shadow: 0 0 0 0.2rem hsl(340, 65%, 45%, 0.25);
+}
+
+/* Footer */
+.footer-section {
+    background: var(--nerd-dark-burgundy);
+    color: var(--nerd-cream);
+    margin-top: 3rem;
+}
+
+.social-link {
+    color: var(--nerd-vhs-yellow);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.social-link:hover {
+    color: var(--nerd-mint);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-glasses {
+        font-size: 8rem;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+}
+
+/* Utility Classes */
+.wobble {
+    animation: wobble 2s ease-in-out infinite;
+}
+
+.retro-glow {
+    box-shadow: var(--shadow-glow);
+}
+
+.text-nerd-burgundy {
+    color: var(--nerd-burgundy);
+}
+
+.text-nerd-yellow {
+    color: var(--nerd-vhs-yellow);
+}
+
+.bg-nerd-mint {
+    background-color: var(--nerd-mint);
+}
